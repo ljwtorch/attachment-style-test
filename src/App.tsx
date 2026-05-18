@@ -200,6 +200,7 @@ function App() {
   const [agreed, setAgreed] = useState(true);
   const [isTermsMounted, setIsTermsMounted] = useState(false);
   const [isTermsVisible, setIsTermsVisible] = useState(false);
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [drawnQuestions, setDrawnQuestions] = useState<QuestionItem[]>(restoredQuizState.drawnQuestions);
   const [answers, setAnswers] = useState<QuizAnswerMap>(restoredQuizState.answers);
   const [currentIndex, setCurrentIndex] = useState(restoredQuizState.currentIndex);
@@ -276,6 +277,14 @@ function App() {
     setIsTermsVisible(false);
   };
 
+  const openQuitConfirm = () => {
+    setShowQuitConfirm(true);
+  };
+
+  const closeQuitConfirm = () => {
+    setShowQuitConfirm(false);
+  };
+
   const startQuiz = () => {
     const selectedQuestions = drawQuestions(bank.questions, bank.draw_policy.draw_count);
     setDrawnQuestions(selectedQuestions);
@@ -303,6 +312,11 @@ function App() {
 
   const returnToLanding = () => {
     setView("landing");
+  };
+
+  const confirmReturnToLanding = () => {
+    setView("landing");
+    setShowQuitConfirm(false);
   };
 
   const handleSelectOption = (optionId: string) => {
@@ -478,14 +492,38 @@ function App() {
               </div>
 
               <div className="question-actions">
-                <button
-                  className="ghost-button"
-                  disabled={currentIndex === 0}
-                  onClick={handlePreviousQuestion}
-                  type="button"
-                >
-                  上一题
-                </button>
+                <div className="question-action-buttons">
+                  <button
+                    className="ghost-button"
+                    disabled={currentIndex === 0}
+                    onClick={handlePreviousQuestion}
+                    type="button"
+                  >
+                    上一题
+                  </button>
+                  <button
+                    aria-expanded={showQuitConfirm}
+                    className="ghost-button"
+                    onClick={openQuitConfirm}
+                    type="button"
+                  >
+                    返回首页
+                  </button>
+                  {showQuitConfirm ? (
+                    <div className="confirm-bubble" role="alertdialog" aria-labelledby="quit-confirm-title">
+                      <p id="quit-confirm-title">确认要返回首页吗？</p>
+                      <p className="confirm-bubble-note">返回后仍可继续这次测试或查看上次结果。</p>
+                      <div className="confirm-bubble-actions">
+                        <button className="ghost-button" onClick={closeQuitConfirm} type="button">
+                          取消
+                        </button>
+                        <button className="start-button" onClick={confirmReturnToLanding} type="button">
+                          确定返回
+                        </button>
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
                 <p className="question-footnote">
                   当前为单题作答模式，选择任一选项后将自动进入下一题。
                 </p>
@@ -626,8 +664,7 @@ function App() {
           >
             <div className="terms-head">
               <div>
-                <p className="section-kicker">用户使用条款&免责声明</p>
-                <h2 id="terms-title">开始答题前，请先确认这些内容。</h2>
+                <h2 id="terms-title">用户使用条款&免责声明</h2>
               </div>
               <button
                 aria-label="关闭条款弹窗"
@@ -654,6 +691,7 @@ function App() {
           </section>
         </div>
       ) : null}
+
     </div>
   );
 }
