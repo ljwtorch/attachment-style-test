@@ -1,0 +1,1699 @@
+{
+  "schema_version": "2.0.0",
+  "bank_id": "attachment-style-cn-situational-v2",
+  "version": "2026-05-18",
+  "locale": "zh-CN",
+  "title": "成人依恋类型测试题库",
+  "subtitle": "四选一场景题，55 道母题，每次随机抽取 38 道",
+  "authoring_strategy": "theory_based_original_situational_items",
+  "question_format": "single_choice_four_options",
+  "question_count": 55,
+  "draw_policy": {
+    "mode": "random_without_replacement",
+    "draw_count": 38,
+    "shuffle_question_order": true,
+    "shuffle_option_order": false,
+    "required_answer_count": 38
+  },
+  "notices": [
+    "本题库为基于公开依恋理论和公开量表结构自主撰写的中文原创场景题。",
+    "本题库不直接复用 ECR、ECR-R、RQ 等经典量表的原始题项文本。",
+    "结果仅供自我探索与关系反思，不构成医学、心理诊断或治疗建议。"
+  ],
+  "styles": [
+    {
+      "id": "secure",
+      "label": "安全型",
+      "subtitle": "信任与平衡的关系模式",
+      "quadrant": {
+        "anxiety": "low",
+        "avoidance": "low"
+      }
+    },
+    {
+      "id": "anxious",
+      "label": "焦虑型",
+      "subtitle": "渴望连接，也容易担心失去",
+      "quadrant": {
+        "anxiety": "high",
+        "avoidance": "low"
+      }
+    },
+    {
+      "id": "avoidant",
+      "label": "回避型",
+      "subtitle": "重视独立，也习惯把需要收起来",
+      "quadrant": {
+        "anxiety": "low",
+        "avoidance": "high"
+      }
+    },
+    {
+      "id": "fearful",
+      "label": "混乱型",
+      "alias": "恐惧-回避型",
+      "subtitle": "既渴望亲密，又害怕受伤",
+      "quadrant": {
+        "anxiety": "high",
+        "avoidance": "high"
+      }
+    }
+  ],
+  "scoring": {
+    "primary_metric": "style_votes",
+    "style_percentage_formula": "style_percentage = style_votes / answered_count",
+    "dimension_points": {
+      "secure": {
+        "anxiety": 0,
+        "avoidance": 0
+      },
+      "anxious": {
+        "anxiety": 2,
+        "avoidance": 0
+      },
+      "avoidant": {
+        "anxiety": 0,
+        "avoidance": 2
+      },
+      "fearful": {
+        "anxiety": 2,
+        "avoidance": 2
+      }
+    },
+    "dimension_average_formula": {
+      "anxiety": "anxiety_average = anxiety_sum / answered_count",
+      "avoidance": "avoidance_average = avoidance_sum / answered_count"
+    },
+    "primary_style_rule": [
+      "先按 style_votes 统计四类选项被选中的次数。",
+      "style_votes 最高的类型作为主类型。",
+      "如果最高票并列，则优先选择与 anxiety_average / avoidance_average 所在象限一致的类型。",
+      "如果仍然并列，则将并列类型同时标记为次级倾向。"
+    ],
+    "result_page_distribution_order": [
+      "secure",
+      "anxious",
+      "avoidant",
+      "fearful"
+    ],
+    "secondary_style_hint_rule": "如果第二高 style_votes 与最高 style_votes 相差不超过 2 票，可在结果页提示存在明显次级倾向。"
+  },
+  "result_page_copy": {
+    "distribution_title": "得分分布",
+    "about_title": "关于你的依恋类型",
+    "traits_title": "主要特征",
+    "advice_title": "成长建议",
+    "footer_disclaimer": "本测试结果仅供参考，不能替代专业心理咨询。依恋类型不是固定不变的，通过自我觉察和努力，可以朝着更安全的依恋模式发展。若你在关系中长期感到痛苦、失控或反复受创，建议寻求专业支持。"
+  },
+  "result_profiles": {
+    "secure": {
+      "label": "安全型依恋",
+      "subtitle": "信任与平衡的关系模式",
+      "about": "你通常能在关系里同时保持亲密和独立。你相信关系可以通过沟通被修复，也相信自己值得被爱。面对距离、冲突和不确定性时，你更容易用现实信息来判断，而不是立刻被焦虑或防御带走。",
+      "traits": [
+        "能够建立并维持相对稳定的亲密关系",
+        "在关系中更容易感到安全、放松和被支持",
+        "既能表达情感和需求，也能尊重彼此边界",
+        "信任他人，同时对自己有基本的价值感",
+        "能平衡独立性和亲密感，不容易走向极端",
+        "遇到矛盾时更愿意沟通，而不是一味追赶或抽离",
+        "面对关系变化时，通常能先看事实再做判断"
+      ],
+      "advice": [
+        "继续保持坦诚、稳定、不过度猜测的沟通方式",
+        "在关系顺利时也记得表达感谢和欣赏，巩固安全感",
+        "遇到伴侣的不安或退缩时，先共情再谈边界和需求",
+        "在新关系中保持耐心，让信任通过时间而不是速度建立",
+        "持续练习自我觉察，避免把“我一向很稳”变成压抑情绪"
+      ]
+    },
+    "anxious": {
+      "label": "焦虑型依恋",
+      "subtitle": "渴望连接，也容易担心失去",
+      "about": "你通常很重视关系，也很在意自己在对方心中的位置。你对冷淡、延迟、模糊和距离更敏感，因此会更快地进入担心、确认和反复思考的状态。你的需要并不等于“太多”，但你可能需要练习用更直接、更稳的方式表达需要。",
+      "traits": [
+        "对关系中的变化、冷淡和不确定性更敏感",
+        "容易通过细节判断自己是否被重视或被爱",
+        "渴望明确回应、承诺和情感确认",
+        "冲突或沉默发生后，情绪恢复通常比较慢",
+        "容易过度解读消息、语气、节奏和互动细节",
+        "在乎关系，也可能因为太在乎而更容易紧绷",
+        "当安全感下降时，可能通过追问、试探或反复确认来稳定自己"
+      ],
+      "advice": [
+        "先区分“事实发生了什么”和“我脑中补了什么”",
+        "把试探改成直接表达，例如清楚说出你需要安抚还是需要答案",
+        "在情绪上来时，先做短暂调节，再进入沟通",
+        "把关系以外的支持系统也建立起来，降低单一依赖",
+        "如果总在关系里反复经历强烈不安，可以考虑借助咨询做更深的模式整理"
+      ]
+    },
+    "avoidant": {
+      "label": "回避型依恋",
+      "subtitle": "重视独立，也习惯把需要收起来",
+      "about": "你通常更重视自我空间、独立和不被过度侵入的感觉。你不一定不在乎关系，而是比很多人更习惯先靠自己，或在压力来临时先拉开距离。你的稳定感常常建立在可控和自主上，因此你可能需要练习在不失去边界的前提下，逐步增加真实表达和相互依靠。",
+      "traits": [
+        "对过快靠近、高频联系或情绪追问更容易有压力",
+        "习惯先自己消化问题，不轻易开口求助",
+        "在冲突或高强度情绪中更容易抽离、降温或沉默",
+        "很看重自由、节奏和个人边界",
+        "不太喜欢被过度定义、被要求立刻表态或过度依赖",
+        "可能会把脆弱感、委屈感和需要感藏得比较深",
+        "越在意时，有时反而越容易收住表达"
+      ],
+      "advice": [
+        "把“我需要空间”说清楚，而不是只用消失或沉默表达",
+        "先从小范围练习求助、表达不适和说明边界",
+        "提醒自己：依赖和失控不是同一件事，亲密也不等于被吞没",
+        "在关系稳定时多做一点主动表达，减少对方只能靠猜",
+        "如果你发现自己总在关键时刻抽离，可以练习识别真正触发你的压力点"
+      ]
+    },
+    "fearful": {
+      "label": "混乱型依恋",
+      "alias": "恐惧-回避型依恋",
+      "subtitle": "既渴望亲密，又害怕受伤",
+      "about": "你通常既想要靠近，又会在真正靠近时感到紧张、失控或想退开。你对被忽略、被拒绝和被吞没都比较敏感，所以常常会在“想确认”与“想躲开”之间来回摆动。你的痛苦往往不只是关系本身，而是内在有两股力量同时在拉扯你。",
+      "traits": [
+        "很需要连接，但一旦关系变近又容易感到不安",
+        "容易在靠近与退缩之间反复切换",
+        "既害怕被丢下，也害怕太依赖或暴露自己",
+        "情绪来得快时，表达可能会混乱、卡住或事后后悔",
+        "很在意关系，却又常常不敢把真实需要完整说出来",
+        "面对冲突、沉默和不确定性时，容易同时出现焦虑与防御",
+        "在高压关系中，容易陷入“越在乎越失控，越失控越想退”的循环"
+      ],
+      "advice": [
+        "先把目标从“立刻变稳定”改成“先看懂自己在拉扯什么”",
+        "当你同时想靠近又想逃开时，先暂停，给情绪和身体一点缓冲时间",
+        "练习用短句表达当下状态，例如“我现在想靠近，但也有点害怕”",
+        "优先建立可预期、节奏稳定、边界清晰的关系环境",
+        "如果你经常在亲密关系里感到失控、混乱或反复受伤，专业支持通常会非常有帮助"
+      ]
+    }
+  },
+  "references": [
+    {
+      "title": "R. Chris Fraley - Measures of Adult Attachment",
+      "url": "https://labs.psychology.illinois.edu/~rcfraley/measures/measures.html",
+      "note": "用于确认成人依恋常见的四分类框架与焦虑/回避二维结构。"
+    },
+    {
+      "title": "The Experiences in Close Relationships-Revised (ECR-R)",
+      "url": "https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm",
+      "note": "用于确认经典成人依恋测量以焦虑和回避为核心维度。"
+    },
+    {
+      "title": "Relationship Structures (ECR-RS)",
+      "url": "https://labs.psychology.illinois.edu/~rcfraley/measures/relstructures.htm",
+      "note": "用于参考关系场景可变化，但底层结构仍可回到焦虑与回避两维。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "theme": "support",
+      "prompt": "当我需要情感支持时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "主动向亲近的人说明自己的状态并寻求帮助",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很想立刻得到回应，如果对方慢一点会更难受",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "先告诉自己别麻烦别人，尽量自己扛过去",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "既想被安慰又怕被拒绝，常常卡住不知道怎么开口",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "theme": "contact_delay",
+      "prompt": "当重要的人回复比平时慢时，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "立刻开始猜是不是对方变冷淡了",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "先给对方一些空间，等合适时再联系",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "反复想发消息又怕打扰，心里很乱",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "提醒自己别太在意，把注意力转去别的事",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "theme": "conflict_repair",
+      "prompt": "发生争执后，我更常见的反应是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "先拉开距离，不太想继续谈",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "一边难受一边想躲开，不知道怎么收尾",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "等情绪缓下来后回到问题本身，继续沟通",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "急着马上和好，如果对方不回应会更慌",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "theme": "space_request",
+      "prompt": "对方说“我想自己待一会儿”时，我第一反应更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "脑子里会出现很多糟糕猜测，又不敢多问",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "觉得这样挺好，大家都各自冷静一下",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "会怀疑是不是我让对方失望了",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "理解这是正常的空间需求，晚些再沟通",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "theme": "relationship_definition",
+      "prompt": "当关系还没完全确认时，我会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "边相处边观察，也能直接聊彼此期待",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "不太想定义得太快，先保持弹性",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "非常想尽快确定关系，不然会一直不安",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "又期待被选择，又怕真的进入关系后受伤",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "theme": "need_expression",
+      "prompt": "当我想提出一个重要需求时，我更常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "先担心对方会不会嫌我要求太多",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "想说又说不出口，常拖到情绪很满才提",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "尽量直接说清楚我的感受和需要",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "倾向于不提，觉得自己处理更省事",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "theme": "emotional_closeness",
+      "prompt": "对方主动想更深入了解我时，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "下意识保留一些，不想被看得太透",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "视情况开放自己，让亲密自然推进",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "想靠近又想退后，很怕暴露脆弱",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "很高兴被重视，也会希望对方更快更深地回应",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "theme": "cooling_signal",
+      "prompt": "当我感觉对方有点冷淡时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "表面装作没事，内心却很慌乱",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "会不断回想细节，想确认到底发生了什么",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "减少期待，告诉自己别太投入",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "留意变化，但会先看整体而不是马上下结论",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "theme": "future_planning",
+      "prompt": "如果要和伴侣讨论未来计划，我更倾向于：",
+      "options": [
+        {
+          "id": "A",
+          "text": "一起商量现实安排，也尊重彼此节奏",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很在意对方给出的承诺是否足够明确",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "觉得谈太远会有压力，能拖就先拖",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "想听到确定答案，却又怕答案让我失望",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "theme": "low_mood",
+      "prompt": "当我心情不好但还说不清原因时，我会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "希望对方主动发现并安抚我",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "先整理一下，再告诉对方我需要什么",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "很想被理解，但越想说越混乱",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "先把自己关起来，不太想解释",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "theme": "cancellation",
+      "prompt": "对方临时取消和我的约定时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "觉得刚好，可以把时间留给自己",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "表面说没事，心里却很失落又不敢追问",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "会失望，但也愿意先听原因再看怎么调整",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "容易联想到自己是不是没那么重要",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "theme": "jealousy",
+      "prompt": "当伴侣和别人相处得很自然热络时，我一般会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "又在意又不敢表现出来，心里很不安",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "告诉自己别卷进去，保持抽离",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "很容易吃醋，想确认自己是不是仍然最重要",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "会留意自己的感受，但不会马上把它理解成威胁",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "theme": "new_relationship",
+      "prompt": "开始一段新关系时，我通常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "既愿意投入，也会保留对彼此节奏的观察",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "不想太快进入太亲密的状态",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "很快就会想知道对方到底有多认真",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "一开始很期待，真正靠近时又会紧张退缩",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "theme": "busy_period",
+      "prompt": "如果进入异地或双方都很忙的阶段，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会更频繁地想确认联系和回应",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "一边很需要连结，一边又担心主动显得太黏",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "主动协商联系频率，维持稳定连接",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "把注意力放回自己生活，减少依赖感",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "theme": "criticism",
+      "prompt": "当伴侣指出我让他不舒服的地方时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "先防御或转移，不太想展开谈",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "先听进去，再看怎么调整和解释",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "很容易陷入自责，同时又想逃开",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "会特别在意，担心这是不是感情变差的信号",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "theme": "repair_attempt",
+      "prompt": "如果我做错了事伤到了对方，我会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "又想补救又很怕被彻底否定",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "急着求对方原谅，希望关系马上恢复",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "尽量用行动弥补，但不太想谈太多感受",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "承认影响、表达歉意，并一起讨论修复",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "theme": "partner_distress",
+      "prompt": "当伴侣情绪低落时，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "先询问对方需要陪伴、建议还是空间",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很怕自己帮不上忙，会一直试着确认",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太知道怎么处理强烈情绪，容易退开",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "很心疼也很慌，怕靠近会做错",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "theme": "inner_world",
+      "prompt": "如果我很想知道对方最近在想什么，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "反复试探或追问，直到心里踏实些",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "选个合适时机直接聊彼此的状态",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "有很多想问的，却担心问了关系更尴尬",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "告诉自己别问太多，省得关系变复杂",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "theme": "stability",
+      "prompt": "当关系进入稳定期后，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "开始觉得太固定有点闷，想把距离拉开些",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "想安定下来，又会担心平静后突然出问题",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "更放松地经营日常，不需要不断验证感情",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "虽然稳定了，但还是会担心对方哪天变了",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "theme": "practical_commitment",
+      "prompt": "讨论金钱、同居、婚姻这类现实议题时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "既希望有答案，又怕答案让关系更沉重",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "愿意把现实问题摊开谈清楚",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "很在意对方的态度是否足够坚定",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "容易觉得压力太大，想先回避这类话题",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "theme": "love_expression",
+      "prompt": "当我向对方表达爱意后，没有马上得到同等回应时，我通常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会开始怀疑自己是不是太多了",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "会有一点在意，但能接受彼此表达节奏不同",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "会提醒自己以后少说一点，免得太暴露",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "很想确认又怕追问后更尴尬",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "theme": "post_intimacy",
+      "prompt": "在一次很亲密、很坦诚的交流之后，我更容易：",
+      "options": [
+        {
+          "id": "A",
+          "text": "过后想一个人待着，缓一缓靠近感",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "感到又靠近又紧张，事后容易反复想",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "觉得更连接，也能自然回到自己的节奏",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "希望这种靠近能持续，不想马上降温",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "theme": "emotion_question",
+      "prompt": "如果伴侣问我“你现在到底在想什么”，我更常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "尽量组织好语言，把真实感受说出来",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很想说明白，但也担心说出来会被误解",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "觉得被追问会有压力，不太想立刻说",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "心里很多话，却卡住不知道从哪句开始",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "theme": "contact_frequency",
+      "prompt": "对方希望我们每天保持更多联系时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "其实会安心一些，但也会更在意对方有没有做到",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "想答应又怕自己跟不上，心里有点乱",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "看看彼此习惯，找一个都舒服的频率",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "容易觉得联系太密会有压迫感",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "theme": "chat_silence",
+      "prompt": "聊天突然沉默一阵时，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "拿不准该不该继续找话题，心里悬着",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "觉得沉默也没什么，不会特别追着聊",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "容易开始想是不是对方不想聊了",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "允许自然停顿，之后再根据情况接上",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "theme": "small_important_day",
+      "prompt": "对方忘记一个我觉得重要的小日子时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "明确告诉对方这件事对我重要，希望下次更注意",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "会很受伤，并把它和“自己是否被重视”联系起来",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "表面说没关系，但心里记着，以后少投入一点",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "想说出来又怕显得自己太敏感，越想越委屈",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "theme": "misunderstanding",
+      "prompt": "当我觉得自己被误解了，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会很急着解释清楚，希望马上被理解",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "先说明自己的真实意思，再听对方怎么理解",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "一边很想解释，一边又怕越说越糟",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "懒得解释太多，觉得算了也行",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "theme": "accepting_help",
+      "prompt": "当对方说“这件事我来帮你”时，我通常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "第一反应是想自己来，不太习惯依赖别人",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "如果真的需要，我能自然接受帮助",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "想接受又担心欠人情或被看轻",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "会很在意对方是不是出于真心、会不会后悔",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "theme": "apology",
+      "prompt": "如果我需要向伴侣道歉，我更容易：",
+      "options": [
+        {
+          "id": "A",
+          "text": "想修复但又怕一开口就被否定",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "会道歉，但更希望快点翻篇别再细谈",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "说清楚自己理解到的影响，并表达修复意愿",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "会反复确认对方是不是还在生我气",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "theme": "status_question",
+      "prompt": "当伴侣问“你觉得我们现在是什么状态”时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "愿意坦诚说出感受和期待",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很想听到清晰答案，模糊会让我坐立不安",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "会觉得被定义关系有点压迫",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "既想确认关系，又怕听到不想听的答案",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "theme": "social_circle",
+      "prompt": "如果对方还没有把我介绍给亲近圈子，我一般会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "很在意这意味着什么，容易多想",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "很想问清楚，又怕问了显得自己在逼近",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "会结合关系阶段判断，必要时直接聊感受",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "觉得不介绍也没什么，没必要太快介入彼此圈子",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "theme": "practical_dependence",
+      "prompt": "当我不得不在现实上依赖伴侣一段时间时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "接受这是一种互相支持，同时保留沟通和边界",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "会不舒服，想尽快恢复完全独立",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "会担心自己是不是因此更容易被对方嫌弃",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "很需要帮助，但又很怕因此失去主动权",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "theme": "feedback",
+      "prompt": "如果伴侣指出我最近有点疏远或过度紧张，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "第一反应是觉得被管得太多",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "愿意一起看看最近发生了什么",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "知道对方说得有点对，却不知道怎么调整",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "会很在意，担心自己是不是正在把关系弄糟",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q34",
+      "theme": "jealousy_expression",
+      "prompt": "当我吃醋时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "心里很乱，既想靠近又想退开",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "想立刻得到安抚和保证",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太会说出来，而是自己默默拉开一点距离",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "承认自己在意，并用不攻击的方式表达",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q35",
+      "theme": "trust_after_conflict",
+      "prompt": "当关系经历过波折后，对方又想更进一步承诺时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会评估现实和信任基础，再决定是否往前走",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很想抓住这次靠近，也会担心承诺能不能持续",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "会担心承诺意味着更多束缚",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "一边想相信，一边又怕重蹈覆辙",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q36",
+      "theme": "post_closeness",
+      "prompt": "一段特别亲密的相处结束后，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "想恢复自己的节奏，不希望继续黏在一起",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "既珍惜那种连接，也能自然回到各自生活",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "可能会失落，希望这种靠近不要太快结束",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "会觉得突然空下来很不适应，又不知该怎么靠近",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q37",
+      "theme": "anger_pattern",
+      "prompt": "当我生气时，我更常见的模式是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "越难受越想立刻说清楚，不然会一直顶着",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "先稳住情绪，再尽量表达核心问题",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "会先沉默或抽离，等自己消化完再说",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "情绪很强但表达混乱，常说完又后悔",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q38",
+      "theme": "weekend_conflict",
+      "prompt": "如果我和伴侣对周末安排有分歧，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "不想冲突升级，容易憋着或临时改口",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "倾向各过各的，减少拉扯",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "提出自己的偏好，也愿意一起找折中",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "会很在意对方是不是愿意优先考虑我",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q39",
+      "theme": "fear_expression",
+      "prompt": "当伴侣鼓励我更诚实地说出害怕的事时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "愿意尝试更真实地表达",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很想说，也担心说完会不会被嫌太多",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "会觉得这种谈法有点不自在",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "明明有很多担心，却越被鼓励越紧张",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q40",
+      "theme": "peaceful_relationship",
+      "prompt": "当关系一切都很平稳时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会下意识把注意力转回自己，不想太黏",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "表面平静，心里却会担心问题只是还没出现",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "能安心享受稳定，而不是总想证明什么",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "容易还是想确认对方是不是和以前一样在乎",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q41",
+      "theme": "slow_down",
+      "prompt": "对方说“我们慢一点也没关系”时，我第一反应更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "容易把这句话听成对方在降温",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "会问清楚对方的意思，再一起调整节奏",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "会觉得这样轻松些，不必推进太快",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "既松一口气又开始担心是不是要失去这段关系",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q42",
+      "theme": "silent_upset",
+      "prompt": "当我感觉对方在生闷气却不说时，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "主动关心并给对方表达的空间",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "很难受，会一直想着是不是因为我",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "觉得对方想说自然会说，不想追问",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "想靠近确认，又怕一问就更僵",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q43",
+      "theme": "my_space",
+      "prompt": "如果我要一个人待一阵子，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "直接拉开距离，少解释也没关系",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "会说明这是为了整理自己，不等于疏远关系",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "明明想休息，却担心这样会让对方不高兴",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "想要空间又怕空间真的把人推远",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q44",
+      "theme": "ex_contact",
+      "prompt": "当伴侣和前任仍保持联系时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "又紧张又不敢深问，脑子里会补很多情节",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "尽量不去碰这类敏感话题，免得更麻烦",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "关注边界是否清晰，必要时直接讨论不安",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "很容易被触发，需要很多确认才能安心",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q45",
+      "theme": "boundaries",
+      "prompt": "要讨论彼此边界时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "认为清楚边界有助于关系更稳定",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "想谈清楚，但也怕对方觉得我事多",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太喜欢把规则讲得太细，觉得顺其自然就好",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "觉得边界重要，却又怕谈边界会引发冲突",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q46",
+      "theme": "partner_need",
+      "prompt": "当伴侣明显很需要我、很依赖我时，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会感觉有点喘不过气来",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "会回应对方需要，同时注意双方都不过度失衡",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "一边想靠近，一边担心自己撑不住",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "会很投入，但也容易因为投入过多而更敏感",
+          "style": "anxious"
+        }
+      ]
+    },
+    {
+      "id": "Q47",
+      "theme": "waiting_answer",
+      "prompt": "等待一个重要关系答案时，比如要不要更进一步，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "很难正常做别的事，会一直想这件事",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "想知道答案又怕答案不如预期，心里反复拉扯",
+          "style": "fearful"
+        },
+        {
+          "id": "C",
+          "text": "会期待，也能给彼此一些思考时间",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "倾向先让自己淡一点，不想被答案绑住情绪",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q48",
+      "theme": "receive_affection",
+      "prompt": "当伴侣突然给我很多爱意或惊喜时，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "开心地接住，也愿意回应这份好意",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "会有点不自在，不知道要不要同样热烈",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "会很开心，但也会担心这股热度会不会很快消失",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "又被打动又有点慌，怕期待升高以后更失落",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q49",
+      "theme": "small_rejection",
+      "prompt": "当我感到被小小拒绝了一下，比如邀约被改期，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会迅速把期待收回来，告诉自己别太认真",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "会失落一下，但会结合整体情况理解",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "很容易放大这件事，觉得自己是不是不重要",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "心里一下沉下去，又不太敢把感受说清楚",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q50",
+      "theme": "meeting_family",
+      "prompt": "第一次见伴侣的重要亲友时，我更像：",
+      "options": [
+        {
+          "id": "A",
+          "text": "既想被接纳又怕自己表现不好",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "会很在意他们对我的评价",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太想卷入太深，保持礼貌就好",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "会紧张但也愿意自然地建立连接",
+          "style": "secure"
+        }
+      ]
+    },
+    {
+      "id": "Q51",
+      "theme": "reassurance_request",
+      "prompt": "当我需要明确的安慰或保证时，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会直接说出我此刻需要安抚和确认",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "会不断想得到更多保证，怕一下子又失效",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太愿意开口要，宁愿自己压下去",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "很需要安慰，却又怕自己显得太脆弱",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q52",
+      "theme": "long_trip",
+      "prompt": "如果伴侣提出一起计划一次长旅行或长期安排，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会很关注这是不是代表对方足够认真",
+          "style": "anxious"
+        },
+        {
+          "id": "B",
+          "text": "期待共同规划，也会一起讨论细节和边界",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "想答应又会紧张，担心太靠近后更容易失望",
+          "style": "fearful"
+        },
+        {
+          "id": "D",
+          "text": "会先想到自由被占满，担心空间不够",
+          "style": "avoidant"
+        }
+      ]
+    },
+    {
+      "id": "Q53",
+      "theme": "repeated_issue",
+      "prompt": "当同一个关系问题反复出现时，我更常：",
+      "options": [
+        {
+          "id": "A",
+          "text": "越谈越想抽离，觉得说再多也没用",
+          "style": "avoidant"
+        },
+        {
+          "id": "B",
+          "text": "会回头看模式，而不是只盯着某次争吵",
+          "style": "secure"
+        },
+        {
+          "id": "C",
+          "text": "会急着想赶快解决，不然心里一直悬着",
+          "style": "anxious"
+        },
+        {
+          "id": "D",
+          "text": "很想解决，又常常在关键时刻乱掉",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q54",
+      "theme": "past_hurt",
+      "prompt": "当对方想了解我过去受伤的经历时，我通常会：",
+      "options": [
+        {
+          "id": "A",
+          "text": "会在感到安全的前提下，逐步分享真实经历",
+          "style": "secure"
+        },
+        {
+          "id": "B",
+          "text": "想通过分享得到理解，也会很在意对方听完的反应",
+          "style": "anxious"
+        },
+        {
+          "id": "C",
+          "text": "不太想展开说，觉得过去的事没必要多碰",
+          "style": "avoidant"
+        },
+        {
+          "id": "D",
+          "text": "想被理解，却很怕一说出来就再次受伤",
+          "style": "fearful"
+        }
+      ]
+    },
+    {
+      "id": "Q55",
+      "theme": "stay_or_leave",
+      "prompt": "如果我要判断一段关系值不值得继续，我更可能：",
+      "options": [
+        {
+          "id": "A",
+          "text": "一边舍不得放手，一边又害怕继续受伤",
+          "style": "fearful"
+        },
+        {
+          "id": "B",
+          "text": "会优先看这段关系是否让我失去太多自由",
+          "style": "avoidant"
+        },
+        {
+          "id": "C",
+          "text": "会综合看信任、尊重、沟通和现实匹配度",
+          "style": "secure"
+        },
+        {
+          "id": "D",
+          "text": "会很难立刻抽离，容易先紧抓关系本身",
+          "style": "anxious"
+        }
+      ]
+    }
+  ]
+}
