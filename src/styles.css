@@ -775,6 +775,8 @@ select {
 .result-footer-card {
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 18px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 250, 255, 0.94) 100%);
 }
 
@@ -783,12 +785,14 @@ select {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .result-actions .ghost-button,
 .result-actions .start-button {
+  width: auto;
   min-width: 98px;
+  height: auto;
   min-height: 44px;
   padding: 0 18px;
   font-size: 15px;
@@ -798,7 +802,7 @@ select {
 .result-footer-card .result-disclaimer {
   display: flex;
   align-items: center;
-  min-height: 64px;
+  min-height: 40px;
   text-align: left;
 }
 
