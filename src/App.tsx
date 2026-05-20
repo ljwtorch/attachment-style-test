@@ -9,6 +9,7 @@ import {
   type QuizResult,
   type StyleId,
 } from "./testEngine";
+import { AnnouncementModal } from "./AnnouncementModal";
 
 type AppView = "landing" | "quiz" | "result";
 
@@ -198,6 +199,7 @@ function App() {
 
   const [view, setView] = useState<AppView>(restoredQuizState.view);
   const [agreed, setAgreed] = useState(true);
+  const [showAnnouncement, setShowAnnouncement] = useState(restoredQuizState.view === "landing");
   const [isTermsMounted, setIsTermsMounted] = useState(false);
   const [isTermsVisible, setIsTermsVisible] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
@@ -447,6 +449,11 @@ function App() {
                 </button>
               </div>
             </section>
+
+            <AnnouncementModal
+              onClose={() => setShowAnnouncement(false)}
+              open={showAnnouncement}
+            />
           </>
         ) : null}
 
