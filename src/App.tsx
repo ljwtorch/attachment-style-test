@@ -195,7 +195,6 @@ function restorePersistedQuizState() {
 
 function App() {
   const restoredQuizState = useMemo(() => restorePersistedQuizState(), []);
-  const hasSavedSession = restoredQuizState.view !== "landing" && restoredQuizState.drawnQuestions.length > 0;
 
   const [view, setView] = useState<AppView>(restoredQuizState.view);
   const [agreed, setAgreed] = useState(true);
@@ -208,6 +207,7 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(restoredQuizState.currentIndex);
   const [result, setResult] = useState<QuizResult | null>(restoredQuizState.result);
 
+  const hasSavedSession = drawnQuestions.length > 0;
   const currentQuestion = drawnQuestions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const progressPercent = drawnQuestions.length
@@ -256,7 +256,7 @@ function App() {
       return;
     }
 
-    if (view === "landing" || drawnQuestions.length === 0) {
+    if (drawnQuestions.length === 0) {
       window.localStorage.removeItem(QUIZ_STATE_STORAGE_KEY);
       return;
     }
@@ -265,7 +265,7 @@ function App() {
       answers,
       currentIndex,
       questionIds: drawnQuestions.map((question) => question.id),
-      view,
+      view: view === "landing" ? (result ? "result" : "quiz") : view,
     };
 
     window.localStorage.setItem(QUIZ_STATE_STORAGE_KEY, JSON.stringify(persistedState));
