@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ANNOUNCEMENTS_ENDPOINT = "https://123262.xyz/announcements";
+const ANNOUNCEMENTS_ENDPOINT = "https://r.123262.xyz/announcements";
 const ANNOUNCEMENT_EXIT_DURATION_MS = 240;
 
 type AnnouncementItem = {
